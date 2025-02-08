@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    // Incorrect way to access element attributes
+    var div = document.getElementById('myDiv');
+    div.attribute = "new value"; //Incorrect. Use setAttribute
+    console.log(div.attribute); //Undefined
+    
+    div.setAttribute('data-custom', 'New attribute value');
+    console.log(div.getAttribute('data-custom')); //'New attribute value'
+  </script>
+</body>
+</html>
